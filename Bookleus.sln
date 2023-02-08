@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E2B7403E-4425-406F-82BF-1CCA08C4C3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookleus.Domain", "Core\Bookleus.Domain\Bookleus.Domain.csproj", "{C26C4C9E-C058-4DDD-9858-71F8F1A8338F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0924741B-C4AB-4211-90FF-D969C6E35418}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9414A0B7-9F38-4F86-A164-85EC0C61D0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookleus.Web", "Presentation\Bookleus.Web\Bookleus.Web.csproj", "{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookleus.Application", "Core\Bookleus.Application\Bookleus.Application.csproj", "{00596E87-A086-46DF-B00E-78FC77E962DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookleus.Data", "Infrastructure\Bookleus.Data\Bookleus.Data.csproj", "{955D72C4-CF30-474D-9993-CB12690B2AB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C26C4C9E-C058-4DDD-9858-71F8F1A8338F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C26C4C9E-C058-4DDD-9858-71F8F1A8338F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C26C4C9E-C058-4DDD-9858-71F8F1A8338F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C26C4C9E-C058-4DDD-9858-71F8F1A8338F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00596E87-A086-46DF-B00E-78FC77E962DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00596E87-A086-46DF-B00E-78FC77E962DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00596E87-A086-46DF-B00E-78FC77E962DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00596E87-A086-46DF-B00E-78FC77E962DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955D72C4-CF30-474D-9993-CB12690B2AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955D72C4-CF30-474D-9993-CB12690B2AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955D72C4-CF30-474D-9993-CB12690B2AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955D72C4-CF30-474D-9993-CB12690B2AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C26C4C9E-C058-4DDD-9858-71F8F1A8338F} = {E2B7403E-4425-406F-82BF-1CCA08C4C3B1}
+		{777B2EFC-05D3-4172-A5D2-226DBD2FB7A1} = {9414A0B7-9F38-4F86-A164-85EC0C61D0D2}
+		{00596E87-A086-46DF-B00E-78FC77E962DB} = {E2B7403E-4425-406F-82BF-1CCA08C4C3B1}
+		{955D72C4-CF30-474D-9993-CB12690B2AB6} = {0924741B-C4AB-4211-90FF-D969C6E35418}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F906D98-68A9-4F59-8323-C2E0A3412084}
+	EndGlobalSection
+EndGlobal
