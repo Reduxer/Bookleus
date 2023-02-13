@@ -11,7 +11,9 @@ namespace Bookleus.Application.Common.Interfaces.Contexts
 {
     public interface IDatabaseContext
     {
-        DbSet<Book> Books { get; set; }
+        DbSet<Book> Books { get; }
+
+        DbSet<CustomerBookReservation> CustomerBookReservations { get; }
 
         int SaveChanges();
 

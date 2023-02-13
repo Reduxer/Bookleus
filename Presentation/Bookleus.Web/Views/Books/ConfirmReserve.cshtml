@@ -1,0 +1,45 @@
+﻿@model Bookleus.Application.Dtos.Book.BookDto
+
+@{
+    ViewData["Title"] = "Reservation";
+}
+
+<h3>Confirm Reservation</h3>
+
+<div asp-validation-summary="All"></div>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SKU)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SKU)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+    </dl>
+
+    <form method="post" id="confirm-reserve-form" asp-action="Reserve">
+        <input type="hidden" asp-for="@Model.SKU" />
+    </form>
+    
+    <div>
+        <a class="btn btn-sm btn-outline-secondary" asp-action="Index" asp-controller="Home">&larr; Back to List</a>
+        @if (Model.IsAvailable)
+        {
+            <button type="submit" form="confirm-reserve-form" class="btn btn-sm btn-primary">Reserve</button>
+        }
+        else
+        {
+            <p class="text-danger d-inline">Not Available</p>
+        }
+
+    </div>
+
+    
+</div>

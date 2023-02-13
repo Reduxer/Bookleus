@@ -11,5 +11,7 @@ namespace Bookleus.Application.Dtos.Book
         public Guid SKU { get; set; }
 
         public string Title { get; set; } = default!;
+
+        public bool IsAvailable { get; set; }
     }
 }

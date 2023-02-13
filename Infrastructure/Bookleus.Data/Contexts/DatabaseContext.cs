@@ -6,7 +6,9 @@ namespace Bookleus.Data.Contexts
 {
     public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Book> Books => Set<Book>();
+
+        public DbSet<CustomerBookReservation> CustomerBookReservations => Set<CustomerBookReservation>();
 
         public DatabaseContext() {}
 

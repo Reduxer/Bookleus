@@ -21,9 +21,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Bookleus.Domain\Bookleus.Domain.csproj" />
   </ItemGroup>
-    
-  <ItemGroup>
-    <Folder Include="Books\Queries\" />
-  </ItemGroup>
 
 </Project>

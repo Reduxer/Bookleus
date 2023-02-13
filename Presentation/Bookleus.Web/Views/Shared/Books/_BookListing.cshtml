@@ -1,8 +1,15 @@
 ﻿@model IEnumerable<Bookleus.Application.Dtos.Book.BookDto>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+<form method="get" asp-action="index" class="d-flex justify-content-end">
+  <div class="col-auto mx-1">
+    <input type="text" name="searchString" class="form-control-sm" value="@ViewBag.SearchString" placeholder="Search" />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-sm btn-outline-primary">Search</button>
+  </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -16,20 +23,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SKU)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @if (Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SKU)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @if (item.IsAvailable)
+                        {
+                            @Html.ActionLink("Reserve", "ConfirmReserve", "Books", new { sku = item.SKU })
+                        }
+                        else
+                        {
+                            <span>N/A</span>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td class="text-center text-danger" colspan="3">No Results Found</td>
+            </tr>
+        }
+
     </tbody>
 </table>

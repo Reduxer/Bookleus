@@ -1,9 +1,17 @@
-﻿@{
+﻿@model Bookleus.Application.Books.Queries.GetBooks.BooksVM
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@if (TempData.TryGetValue("book-reserve-success", out var message))
+{
+    <div class="alert alert-success">
+        @message
+    </div>
+}
+
+<div>
+    <p class="display-5">Featured Books</p>
 </div>
 
+<partial model="@Model.Data" name="~/Views/Shared/Books/_BookListing.cshtml" />
