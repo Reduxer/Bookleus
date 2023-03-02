@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Bookleus.Identity.Contexts;
 using Bookleus.Application.Common.Interfaces.Services;
 using Bookleus.Identity.Services;
+using Bookleus.Domain.Entities;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -16,7 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddDbContext<IdentityDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<IdentityDbContext>();
 
             services.AddScoped<IUserService, UserService>();
