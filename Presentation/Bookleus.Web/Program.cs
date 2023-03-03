@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Bookleus.Identity.Contexts;
 var builder = WebApplication.CreateBuilder(args);
 
 //identity layer

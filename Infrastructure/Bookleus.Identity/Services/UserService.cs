@@ -1,4 +1,6 @@
 ﻿using Bookleus.Application.Common.Interfaces.Services;
+using Bookleus.Domain.Entities;
+using Bookleus.Identity.Contexts;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,9 @@ namespace Bookleus.Identity.Services
 {
     public class UserService : IUserService
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public UserService(UserManager<IdentityUser> userManager)
+        public UserService(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
