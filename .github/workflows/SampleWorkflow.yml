@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create a file
-        run: echo "Test File" > file.text
+        run: echo "Test File" > file.txt
       - uses: actions/upload-artifact@v3
         with:
           name: file
