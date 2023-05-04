@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setting output
-        id: testId
+        id: test-id
         run: echo "testvar=lesamel" >> "$GITHUB_OUTPUT"
   
   job-two:
     runs-on: ubuntu-latest
     steps:
       - name: getting output from job-one
-        run: echo ${{ steps.testId.outputs.testvar }}
+        run: echo ${{ steps.test-id.outputs.testvar }}
