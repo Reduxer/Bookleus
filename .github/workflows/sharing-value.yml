@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: setting output
         id: testId
-        run: echo "::set-output name=testvar::Lesamel"
+        run: echo "testvar=lesamel" >> $GITHUB_OUTPUT
   
   job-two:
     runs-on: ubuntu-latest
