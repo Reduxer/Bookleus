@@ -34,3 +34,4 @@ jobs:
         with:
           name: file
           path: file.txt
+          if-no-files-found: ignore
