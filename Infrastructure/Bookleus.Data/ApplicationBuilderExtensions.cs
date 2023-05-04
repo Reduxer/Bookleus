@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Bookleus.Application.Common.Interfaces.Contexts;
 using Microsoft.Extensions.DependencyInjection;
+using Bookleus.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Microsoft.AspNetCore.Builder
 {
@@ -15,6 +17,8 @@ namespace Microsoft.AspNetCore.Builder
         {
             using var serviceScope = app.ApplicationServices.CreateScope();
             IDatabaseContext context = serviceScope.ServiceProvider.GetRequiredService<IDatabaseContext>();
+
+            ((DatabaseContext)context).Database.EnsureCreated();
 
             SeedBookData(context);
 
