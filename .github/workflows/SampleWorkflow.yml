@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: create a file
         run: echo "Test File" > file.text
-      - uses: action/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
           name: file
           path: file.txt
