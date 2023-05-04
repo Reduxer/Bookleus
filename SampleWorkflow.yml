@@ -1,0 +1,25 @@
+name: Sample
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build one
+      - run: echo "build one"
+  
+  build-two:
+    needs: ["build-one"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: build two
+      - run: echo "build two"
+  
+  build-three:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build three
+      - run: echo "build three"
