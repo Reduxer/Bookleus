@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build two
-        run: echo "build two"
+        run: env
   
   build-three:
     runs-on: ubuntu-latest
