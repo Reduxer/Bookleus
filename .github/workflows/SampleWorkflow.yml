@@ -5,9 +5,6 @@ on:
     branches: ["master"]
   workflow_dispatch:
 
-env: 
-  myname: "Lesamel"
-
 jobs:
   build-one:
     runs-on: ubuntu-latest
