@@ -41,7 +41,7 @@ namespace Bookleus.Web.Controllers
 
                 var book = result.Data.First();
 
-                return View(book);
+                return NotFound();
             }
             catch (NotFoundException)
             {
