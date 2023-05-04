@@ -15,6 +15,7 @@ jobs:
       testvar: ${{ steps.test-id.outputs.testvar }}
   
   job-two:
+    needs: ["job-one"]
     runs-on: ubuntu-latest
     steps:
       - name: getting output from job-one
