@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up .NET Core SDK version 6
-      uses: actions/set-dotnet@v3
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
     - name: Install dependencies
