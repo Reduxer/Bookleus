@@ -1,0 +1,22 @@
+name: CI/CD
+
+on:
+  push:
+    branches: 
+    - master
+  workflow_dispatch:
+  
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up .NET Core SDK version 6
+      uses: actions/set-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Test using .NET CLI
+      run: dotnet test --no-restore --configuration Release
