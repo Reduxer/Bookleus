@@ -1,7 +1,9 @@
 # Bookleus
 
-bookleus> dotnet ef database update --project .\Infrastructure\Bookleus.Data\Bookleus.Data.csproj --startup-project .\Presentation\Bookleus.Web\Bookleus.Web.csproj --context DatabaseContext
+How to run locally
 
-bookleus> dotnet ef database update --project .\Infrastructure\Bookleus.Identity\Bookleus.Identity.csproj --startup-project .\Presentation\Bookleus.Web\Bookleus.Web.csproj --context IdentityDbContext
+dotnet ef database update --project .\Infrastructure\Bookleus.Data\Bookleus.Data.csproj --startup-project .\Presentation\Bookleus.Web\Bookleus.Web.csproj --context DatabaseContext
 
-bookleus> dotnet run --project .\Presentation\Bookleus.Web\
+dotnet ef database update --project .\Infrastructure\Bookleus.Identity\Bookleus.Identity.csproj --startup-project .\Presentation\Bookleus.Web\Bookleus.Web.csproj --context IdentityDbContext
+
+dotnet run --project .\Presentation\Bookleus.Web\
