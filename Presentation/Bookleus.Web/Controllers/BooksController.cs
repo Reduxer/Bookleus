@@ -54,7 +54,7 @@ namespace Bookleus.Web.Controllers
         {
             try
             {
-                var userId = _userService.GetUserId(User);
+                var userId = _userService.GetUserId(User) ?? throw new ApplicationException("User id not found.");
                 _ = await _mediator.Send(new ReserveBookCommand() { SKU = sku, UserId = userId });
             }
             catch(Exception)
