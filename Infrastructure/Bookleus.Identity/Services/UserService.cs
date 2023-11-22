@@ -20,7 +20,7 @@ namespace Bookleus.Identity.Services
             _userManager = userManager;
         }
 
-        public string GetUserId(ClaimsPrincipal principal)
+        public string? GetUserId(ClaimsPrincipal principal)
         {
             return _userManager.GetUserId(principal);
         }

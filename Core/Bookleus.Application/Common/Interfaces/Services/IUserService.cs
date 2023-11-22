@@ -13,7 +13,7 @@ namespace Bookleus.Application.Common.Interfaces.Services
         /// Gets the id of the authenticated user.
         /// </summary>
         /// <returns>User id in string</returns>
-        string GetUserId(ClaimsPrincipal principal);
+        string? GetUserId(ClaimsPrincipal principal);
 
         /// <summary>
         /// Checks if user exists and active by given id
